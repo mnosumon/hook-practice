@@ -3,23 +3,25 @@ import React, { useRef } from 'react'
 const DropDown = () => {
     let drofRef = useRef(null)
     let HandleClick = (e) => {
-        // if (drofRef.current.style.display == "none") {
-        //     drofRef.current.style.display = "block"
-        // }else{
-        //     drofRef.current.style.display = "none"
-        // }
-        console.log(e.target);
+        if (drofRef.current.style.display == "none") {
+            drofRef.current.style.display = "block"
+        }else{
+            if (!drofRef.current.contains(e.target)) {
+                drofRef.current.style.display = "none"
+            }
+        }
     }
   return (
-    <div onClick={HandleClick} ref={drofRef}>
-        <button >Open</button>
-        <ul >
+    <div onClick={HandleClick} >
+        <button  >Open</button>
+        <ul ref={drofRef} style={{display: "none", backgroundColor: "red"}}>
             <li>Hello</li>
             <li>Hello</li>
             <li>Hello</li>
             <li>Hello</li>
             <li>Hello</li>
         </ul>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, repellat?</div>
     </div>
   )
 }
