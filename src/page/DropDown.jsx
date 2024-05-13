@@ -24,7 +24,6 @@ const DropDown = () => {
     let handleChange = (e)=>{
         setInput(e.target.value);
     }
-    console.log(input);
   return (
     <>
         <div onClick={HandleClick} style={{height: "300px", backgroundColor: 'gray'}}>
