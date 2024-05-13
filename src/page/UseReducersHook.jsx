@@ -55,7 +55,7 @@ const UseReducersHook = () => {
   // }
   return (
     <>
-      <div style={{marginBottom: "20px", backgroundColor: "#FF5733"}}>
+      <div style={{marginBottom: "20px", marginTop: "20px", backgroundColor: "#FF5733"}}>
         <h2>{state.count}</h2>
         <button onClick={()=>dispatch({type: "plus"})}>Plus</button>
         <button onClick={()=>dispatch({type: "minus"})}>Minus</button>
