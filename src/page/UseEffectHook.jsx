@@ -7,7 +7,6 @@ const UseEffectHook = () => {
     useEffect(()=>{
         document.title = count
     })
-    console.log(count);
     useEffect(()=>{
         document.title = count1
     },[])

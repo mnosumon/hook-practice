@@ -17,7 +17,7 @@ const DropDown = () => {
         if (input === "") {
             inputRef.current.focus()
         }else{
-            inputRef.current.style.backgroundColor = "red"
+            inputRef.current.style.color = "red"
         }
         
     }
