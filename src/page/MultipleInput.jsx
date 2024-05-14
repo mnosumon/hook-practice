@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { inputValue } from '../slice/inputReciever' 
+import { inputValue } from '../slice/inputRecieverSlice' 
 
 const MultipleInput = () => {
   // const nameRef = useRef(null)

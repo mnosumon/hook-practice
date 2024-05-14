@@ -2,8 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 const InputvalueRecieve = () => {
-  const valueRecive = useSelector((state) => state.inputt.value)
-  console.log(valueRecive);
+  const valueRecive = useSelector((state) => state.inputt.inputContent)
   return (
     <>
         <section style={{margin:"20px 0", backgroundColor: "#C70039"}}>

@@ -1,19 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  value: {
+  inputContent: {
     name: '',
     email: '',
     password: ''
   }
 }
-
 export const counterSlice = createSlice({
   name: 'input',
   initialState,
   reducers: {
     inputValue: (state, action) => {
-      state.value = action.payload; 
+     
+      state.inputContent = action.payload; 
     }
   },
 })

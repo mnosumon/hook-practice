@@ -5,16 +5,31 @@ import UseEffectHook from './page/UseEffectHook'
 import MultipleInput from './page/MultipleInput'
 import Other from './page/Other'
 import InputvalueRecieve from './components/InputvalueRecieve'
+import {
+  createRoutesFromElements,
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import Navbar from './components/Navbar'
+import RoutLayout from './routlayout/RoutLayout'
 
 const App = () => {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route element={<RoutLayout/>}>
+        <Route path='/inputvluerecieve' element={<InputvalueRecieve/>}/>
+        <Route path='/multipleInput' element={<MultipleInput/>}/>
+        <Route path='/useEffectHook' element={<UseEffectHook/>}/>
+        <Route path='/useReducersHook' element={<UseReducersHook/>}/>
+        <Route path='/' element={<DropDown/>}/>
+        <Route path='/other' element={<Other/>}/>
+      </Route>
+    )
+  );
   return (
     <>
-    <Other/>
-      <MultipleInput/>
-      <UseEffectHook/>
-      <UseReducersHook/>
-      <DropDown/>
-      <InputvalueRecieve/>
+      <RouterProvider router={router}/>
     </>
   )
 }
