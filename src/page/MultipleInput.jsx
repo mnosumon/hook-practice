@@ -1,6 +1,12 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 const MultipleInput = () => {
+
+  let nameRef = useRef(null)
+  let emailRef = useRef(null)
+  let passwordRef = useRef(null)
+  
+
   let [recieve, setRecieve] = useState({
     name: " ",
     email: " ",
@@ -14,11 +20,12 @@ const MultipleInput = () => {
       [name]: value
     }))
   }
-console.log(recieve);
   let handleSubmit = ()=>{
-
+    nameRef.current.innerText = `Name: ${recieve.name}`
+    emailRef.current.innerText = `Email: ${recieve.email}`
+    passwordRef.current.innerText = `password: ${recieve.password}`
   }
-  return (
+  return ( 
 
     <section style={{marginBottom: "20px", marginTop: "20px", backgroundColor: "#64FF33"}}>
         <h2>hello</h2>
@@ -29,9 +36,9 @@ console.log(recieve);
           <input type="submit" placeholder='Submit' onClick={handleSubmit}/>
         </div>
         <div>
-          <h3>{recieve.name}</h3>
-          <h3>{recieve.email}</h3>
-          <h3>{recieve.password}</h3>
+          <h3 ref={nameRef}>Name: </h3>
+          <h3 ref={emailRef}>Email: </h3>
+          <h3 ref={passwordRef}>Password: </h3>
         </div>
         
     </section>
