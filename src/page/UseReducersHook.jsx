@@ -4,12 +4,13 @@ let initialState = {
   count: 0
 }
 function reducer(state, action) {
+
   switch (action.type) {
     case "plus":
-      return {count: state.count++}
+      return {count: state.count+1}
     case "minus":
       if (state.count > 0) {
-        return {count: state.count--}
+        return {count: state.count-1}
       }
     default:
       return state

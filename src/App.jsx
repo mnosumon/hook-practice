@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 import Navbar from './components/Navbar'
 import RoutLayout from './routlayout/RoutLayout'
+import UseRefHook from './page/UseRefHook'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/multipleInput' element={<MultipleInput/>}/>
         <Route path='/useEffectHook' element={<UseEffectHook/>}/>
         <Route path='/useReducersHook' element={<UseReducersHook/>}/>
+        <Route path='/useRef' element={<UseRefHook/>}/>
         <Route path='/' element={<DropDown/>}/>
         <Route path='/other' element={<Other/>}/>
       </Route>

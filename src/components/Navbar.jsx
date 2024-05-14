@@ -10,6 +10,7 @@ const Navbar = () => {
             <NavLink to='inputvluerecieve'>InputvalueRecieve</NavLink>
             <NavLink to='useEffectHook'>UseEffectHook</NavLink>
             <NavLink to='useReducersHook'>UseReducersHook</NavLink>
+            <NavLink to='useRef'>useRef</NavLink>
             <NavLink to='other'>Other</NavLink>
         </ul>
     </nav>
